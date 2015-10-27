@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="RestaurantManager.UniversalWindows.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RestaurantManager.UniversalWindows"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+   
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"  />
+            <ColumnDefinition Width="5*"  />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Restaurant Manager" 
+                   Grid.Column="1"                    
+                   Grid.Row="0"
+                   HorizontalAlignment="Center" 
+                   VerticalAlignment="Bottom"
+                   TextWrapping="Wrap"
+                   FontSize="40" />
+        
+        <TextBlock Text="Internal Test Version" 
+                 Grid.Column="1" 
+                 Grid.Row="1"
+                 HorizontalAlignment="Center"                 
+                 VerticalAlignment="Center"
+                 Margin="0,50,0,0"
+                 TextWrapping="Wrap"
+                 />
+        
+        <TextBlock Text="**Got to Orders View**"
+                 Grid.Column="0"
+                 Grid.Row="3"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"
+                 />
+        <TextBlock Text="**Submit Order**"
+                 Grid.Column="3"
+                 Grid.Row="3"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Center"                 
+                 />
+    </Grid>
+</Page>
