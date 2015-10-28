@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-   
+            
     
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -37,17 +37,22 @@
                  TextWrapping="Wrap"
                  />
         
-        <TextBlock Text="**Got to Orders View**"
+        <Button Content="Got to Orders View"
+                Name="BtnExpediate"
                  Grid.Column="0"
                  Grid.Row="3"
                  VerticalAlignment="Center"
                  HorizontalAlignment="Center"
-                 />
-        <TextBlock Text="**Submit Order**"
-                 Grid.Column="3"
+                 Click="BtnExpediate_Click" />
+        
+        <Button Content="Submit Order"
+                Name="BtnOrder"
+                Grid.Column="3"
                  Grid.Row="3"
                  VerticalAlignment="Center"
-                 HorizontalAlignment="Center"                 
+                 HorizontalAlignment="Center"
+                 Tapped="TextBlock_Tapped"
+                 Click="BtnOrder_Click"
                  />
     </Grid>
 </Page>

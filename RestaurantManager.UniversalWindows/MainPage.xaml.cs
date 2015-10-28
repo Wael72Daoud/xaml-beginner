@@ -26,5 +26,23 @@ namespace RestaurantManager.UniversalWindows
         {
             this.InitializeComponent();
         }
+
+        private void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+          
+           
+        }
+
+        
+
+        private void BtnOrder_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(OrderPage));
+        }
+
+        private void BtnExpediate_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(ExpeditePage));                                              
+        }
     }
 }

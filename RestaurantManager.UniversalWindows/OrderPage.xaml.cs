@@ -20,11 +20,24 @@ namespace RestaurantManager.UniversalWindows
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class OrderPage : Page
+    public sealed partial class ExpeditePage : Page
     {
-        public OrderPage()
+        public ExpeditePage()
         {
             this.InitializeComponent();
+        }
+
+        private void TextBlock_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+
+            
+            
+        }
+
+        private void appBarHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
         }
     }
 }
