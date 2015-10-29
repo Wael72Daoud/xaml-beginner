@@ -27,16 +27,21 @@ namespace RestaurantManager.UniversalWindows
             this.InitializeComponent();
         }
 
-        private void TextBlock_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
-        {
-
-            
-            
-        }
+     
 
         private void appBarHome_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+       
+        }
+
+        private void BtnsbmtOrder_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
