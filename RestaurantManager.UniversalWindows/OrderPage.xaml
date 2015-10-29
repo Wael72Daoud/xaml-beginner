@@ -5,12 +5,17 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dataManager="using:RestaurantManager.UniversalWindows.Models"
     mc:Ignorable="d">
-
+    <Page.DataContext>
+        <dataManager:DataManager />
+    </Page.DataContext>
+    
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
-            <RowDefinition Height=".2*"/>
-            <RowDefinition Height=".1*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height=".5*"/>
             <RowDefinition Height=".1*"/>
             <RowDefinition Height=".1*"/>
@@ -24,34 +29,37 @@
         
         <TextBlock Text="Special Requests:"
                    Grid.Column="1"
-                   Grid.Row="1"                   
+                   Grid.Row="2"                   
                    />
         <TextBlock Text="Order Items:"
                    Grid.Column="2"
-                   Grid.Row="1"
+                   Grid.Row="2"
                    
                    />
 
-        <ListView Grid.ColumnSpan="1" Grid.Row="1" Grid.RowSpan="2" Background="LightGreen">
-            
-        </ListView>
-        <ListView Grid.Column="2" Grid.Row="2" Background="SkyBlue">
-                       
-        </ListView>
+        <ListView x:Name="LstVewMenuItems" Grid.ColumnSpan="1" Grid.Row="2" Grid.RowSpan="2" Background="LightGreen" ItemsSource="{Binding MenueItems}"/>
+
+
+        <ListView x:Name="LstVewSelectedItems" Grid.Column="2" Grid.Row="3" Background="SkyBlue" ItemsSource="{Binding CurrentlySelectedMenuItems}" />
+
+
         <Button Content="Add to Order" 
                    Grid.Column="0"
-                   Grid.Row="4"
+                   Grid.Row="5"
+                   Name="BtnAddOrder"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center" 
-                    DoubleTapped="TextBlock_DoubleTapped"
+                   Click="appBarHome_Click"
                    />
 
         <Button Content="Submit Order" 
-                   
-                   Grid.Row="4"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="5"
                    Grid.Column="1"
-                   HorizontalAlignment="Right"
+                   Name="BtnsbmtOrder"
+                   HorizontalAlignment="Center"
                    VerticalAlignment="Center"
+                   Click="BtnsbmtOrder_Click"
          />
 
         <AppBar Grid.ColumnSpan="3" Grid.Column="0">
