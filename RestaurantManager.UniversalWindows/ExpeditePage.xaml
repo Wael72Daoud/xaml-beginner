@@ -5,18 +5,22 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dataManager="using:RestaurantManager.UniversalWindows.Models"
     mc:Ignorable="d">
-   
-  
-    
+
+    <Page.DataContext>
+        <dataManager:DataManager />
+    </Page.DataContext>
+
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="100"/>
         </Grid.RowDefinitions>
-        
+        <GridView ItemsSource="{Binding OrderItems}" Grid.Row="1" />
         <Button Content="Clear All Orders"
-                   Grid.Row="1"
+                   Grid.Row="2"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"
                    Tapped="TextBlock_Tapped"
